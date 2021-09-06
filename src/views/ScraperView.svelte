@@ -11,7 +11,7 @@
     }
 
     async function scrapeData(){
-      await fetch(`http://localhost:5000/runscraper`)
+      await fetch(`/runscraper`)
       .then(r => r.json())
       .then(data => {
         scraperDataArr = data;

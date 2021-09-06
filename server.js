@@ -3,6 +3,7 @@ const cors = require('cors')
 const app = express();
 const {startScrape} = require('./puppeteer/startScraper');
 const fs = require('fs');
+const port = 3000;
 
 
 app.use(express.urlencoded({extended: true})); 
@@ -35,6 +36,6 @@ app.use('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
   
-app.listen(5000, () => {
-  console.log("App's running on port 5000");
+app.listen(port, () => {
+  console.log(`App is running on port ${port}`);
 });
