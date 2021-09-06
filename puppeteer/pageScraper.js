@@ -15,20 +15,19 @@ const scraperObject = {
         // search for DOM element
         let element = await page.$(text);
         let value = await page.evaluate(el => el.textContent, element);
-        
-        if(typeof value !== 'null' || value !== null){
-            // to filter out results where ps5 is not in stock
-            const target = /nicht verfügbar|Derzeit nicht verfügbar|bereits vergriffen|ausverkauft|nicht gekauft|nicht erhältlich/gmi;
-            if(value.search(target) === -1){
-                // array was appending already existing data
-                objIndex = jsonArr.findIndex((obj => obj.STORE === store));
-                if(objIndex !== -1){
-                    jsonArr[objIndex].STORE = store;
-                }else{
-                    jsonArr.push({STORE: store, URL: url});
-                }
+        // to filter out results where ps5 is not in stock
+        const target = /nicht verfügbar|Derzeit nicht verfügbar|bereits vergriffen|ausverkauft|nicht gekauft|nicht erhältlich/gmi;
+        if(value.search(target) === -1){
+            // array was appending already existing data
+            objIndex = jsonArr.findIndex((obj => obj.STORE === store));
+            if(objIndex !== -1){
+                jsonArr[objIndex].STORE = store;
+            }else{
+                jsonArr.push({STORE: store, URL: url});
             }
+            
         }
+
         // to check if all pages have been opened, there is always one empty tab so +1
          await browser.pages().then((res)=>{
             if(res.length === arrOfStores.length + 1){
