@@ -11,6 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 
+
 app.get('/runscraper', async(req, res) => {
   try{
     fs.truncate('src/output/text.txt', 0, function(){console.log('done')});
