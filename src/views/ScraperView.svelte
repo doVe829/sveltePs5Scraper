@@ -5,7 +5,7 @@
     let scraperDataArr;
     let reRunScrapper = setInterval(()=>{
       scrapeData();
-    }, 40000);
+    }, 300000);
     $: {
       reRunScrapper;
     }
