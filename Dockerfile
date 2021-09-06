@@ -23,7 +23,6 @@ RUN  apt-get update \
      && chmod +x /usr/sbin/wait-for-it.sh
 RUN npm install
 COPY . .
-RUN npm run build
 EXPOSE 3000
 
 CMD [ "npm", "start" ]
