@@ -7,7 +7,7 @@ const stores =  [
     { store: 'MEDIMAX', url: 'https://www.medimax.de/ps5-reservierung-info', mainContainer: 'body', text: '#main-section > div.content-section > main > div:nth-child(2) > p:nth-child(7) > strong > span'},
     { store: 'OTTO', url: 'https://www.otto.de/technik/gaming/playstation/ps5/', mainContainer: 'body', text: '#san_privatePageContent > div.sanContentArea > div:nth-child(1) > div.promo-module-container > div:nth-child(2) > div' },
     { store: 'ALTERNATE', url: 'https://www.alternate.de/Sony-Interactive-Entertainment/PlayStation-5-Spielkonsole/html/product/1651220', mainContainer: 'body', text: '#product-top-right > div:nth-child(4) > div > div'},
-    { store: 'MUELLER', url: 'https://www.mueller.de/multi-media/playstation-5/', mainContainer: 'body', text: '#page > main > div > div.mu-column-layout__content > div > div:nth-child(3) > div > div > h2'}
+    { store: 'MUELLER', url: 'https://www.mueller.de/multi-media/playstation-5/', mainContainer: 'body', text: '#page > main > div > div.mu-column-layout__content > div > div:nth-child(2) > div > div '}
 ];
 
 module.exports = stores;

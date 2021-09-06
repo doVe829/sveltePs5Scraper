@@ -6,12 +6,12 @@ const scraperObject = {
     async scraper(browser, url, mainSelect, text,store,privacyNotice = ''){
         let page = await browser.newPage();
         console.log(`Navigating to ${url}...`);
-        await page.goto(url);
+        await page.goto(url, {waitUntil: 'load', timeout: 15000});
         if(privacyNotice !== ''){
             await page.click(privacyNotice);
         }
          // Wait for the required DOM to be rendered
-        await page.waitForSelector(mainSelect);
+        await page.waitForSelector(mainSelect, {timeout: 5000});
         // search for DOM element
         let element = await page.$(text);
         let value = await page.evaluate(el => el.textContent, element);
