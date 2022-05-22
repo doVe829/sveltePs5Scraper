@@ -21,7 +21,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "puppeteer": "^10.2.0",
+    "puppeteer": "^14.1.1",
     "sirv-cli": "^1.0.0"
   },
   "description": "*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*",
