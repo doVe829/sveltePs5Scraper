@@ -10,9 +10,7 @@ Checks if store has a Ps5 (Disc version) available. If the Ps5 is available it w
 - run ``` npm run buildProduction ```
 - that's it.
 
-OR
 
-visit this link [coming soon]
 
 ## Checked Shops 
 | Shops |
@@ -24,3 +22,5 @@ visit this link [coming soon]
 | OTTO | 
 | ALTERNATE | 
 | MUELLER | 
+
+❗ TARGETS ON SHOP PAGES MAY BE DEPECRATED ❗
